@@ -19,7 +19,7 @@ export default async function Home() {
 <main className="w-full h-full">
   <div className="md:w-2/4 sm:w-3/4 m-auto p-4 my-5 rounded-lg bg-orange-500 drop-shadow-xl">
     <h1 className="text-slate-100 text-center text-2xl font-extrabold">
-      Full Stack Blog 📝
+      ログイン
     </h1>
   </div>
   {/* Link */}
