@@ -21,10 +21,11 @@ model Post {
   date DateTime @default(now())
 }
 
+
   //ログイン画面追加
 model User {
-  Id Int @id @default(autoincrement())
-  Email String @unique
-  Name String?
-  Password String
+  id Int @id @default(autoincrement())
+  email String @unique
+  name String?
+  password String
 }
