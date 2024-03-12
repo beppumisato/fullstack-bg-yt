@@ -12,18 +12,38 @@ async function fetchAllBlogs(){
   return data.posts;
 }
 
+//ログイン画面
+async function fetchAllLogins(){
+  const res = await fetch(`http://localhost:3000/api/login`,{
+    cache: "no-store",//SSR
+  });
+
+  const data = await res.json();
+
+  return data.users;
+}
 
 export default async function Home() {
   const posts = await fetchAllBlogs();
+  const users = await fetchAllLogins();
+
   return(
 <main className="w-full h-full">
+
+<div className="float-end my-2 p-3">
+<Link
+      href={"/login/add"}
+      className="md:w-2/6 sm:w-4/4 text-center rounded-md p-5 m-10 bg-blue-500 font-semibold text-slate-100 ">
+      ログイン
+</Link>
+</div>
+
   <div className="md:w-2/4 sm:w-2/4 m-auto p-4 my-5 rounded-lg bg-green-600 drop-shadow-xl">
     <h1 className="text-slate-100 text-center text-2xl font-extrabold">
       Full Stack Blog 📝
     </h1>
   </div>
 
-  {/* Link */}
   <div className="flex my-5">
     <Link
       href={"/blog/add"}
@@ -31,6 +51,7 @@ export default async function Home() {
     >
       ブログ新規作成
     </Link>
+
   </div>
 
   <div className="w-full flex flex-col justify-center items-center">
@@ -69,3 +90,4 @@ export default async function Home() {
 </main>
   );
 }
+

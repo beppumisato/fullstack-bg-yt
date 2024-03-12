@@ -1,3 +1,5 @@
+//ログイン画面
+
 import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
 
@@ -7,7 +9,7 @@ export async function main() {
     try {
         await prisma.$connect();
     } catch(err){
-        return Error('接続に失敗');
+        return Error('接続に失敗しました');
     }
 }
 
@@ -26,7 +28,7 @@ export const GET = async (req: Request, res: NextResponse) => {
     }
 };
 
-//ログインAPI
+//ログイン用API
 export const POST = async (req: Request, res: NextResponse) => {
     try{
         const { email, name, password } = await req.json();
