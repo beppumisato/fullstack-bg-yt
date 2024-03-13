@@ -43,21 +43,33 @@ const PostLogin= () => {
     return (
     <>
     <Toaster />
+    <div className="background-slate-100"></div>
+    <div className="w-full m-auto flex my-4">
+      <div className="flex flex-col justify-center items-center m-auto">
+        <p className="text-2xl text-slate-100 font-bold p-3  bg-green-500 ">ログイン💡</p>
+        <form onSubmit={handleSubmit}>
+
     <input ref={emailRef} 
-    placeholder="タイトルを入力" 
+    placeholder="メールアドレスを入力" 
     type="text" 
-    className="rounded-md px-4 w-full py-2 my-2"
+    className="rounded-md px-4 w-full py-5 my-2"
     />
     <input ref={nameRef} 
     placeholder="名前を入力" 
     type="text" 
-    className="rounded-md px-4 w-full py-2 my-2"
+    className="rounded-md px-4 w-full py-5 my-2"
     />
     <input ref={passwordRef} 
     placeholder="パスワードを入力" 
     type="text" 
-    className="rounded-md px-4 w-full py-2 my-2"
+    className="rounded-md px-4 w-full py-5 my-2"
     />
+    <button className="float-end font-semibold px-7 py-2 shadow-xl bg-blue-400 rounded-lg hover:bg-blue-500">
+    ログイン
+    </button>
+    </form>
+    </div>
+    </div>
     </>
     );
 }
