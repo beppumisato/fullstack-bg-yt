@@ -52,7 +52,7 @@ const PostBlog= () => {
             placeholder="記事詳細を入力"
             className="rounded-md px-4 py-2 w-full my-2"
           ></textarea>
-          <button className="font-semibold px-4 py-2 shadow-xl bg-green-300 rounded-lg m-auto hover:bg-green-400">
+          <button className="font-semibold px-4 py-2 shadow-xl bg-green-500 rounded-lg m-auto hover:bg-green-500">
             投稿
           </button>
         </form>
